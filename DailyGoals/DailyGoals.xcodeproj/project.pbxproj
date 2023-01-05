@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A277E2947379A00288C4B /* DailyGoalsApp.swift */; };
+		A02A27812947379A00288C4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27802947379A00288C4B /* ContentView.swift */; };
+		A02A27832947379B00288C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02A27822947379B00288C4B /* Assets.xcassets */; };
+		A02A27862947379B00288C4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02A27852947379B00288C4B /* Preview Assets.xcassets */; };
+		A02A27912947379B00288C4B /* DailyGoalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27902947379B00288C4B /* DailyGoalsTests.swift */; };
+		A02A279B2947379B00288C4B /* DailyGoalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */; };
+		A02A279D2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */; };
+		A02A27AB2947A5D100288C4B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AA2947A5D100288C4B /* Team.swift */; };
+		A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AC2947C13700288C4B /* GoalActions.swift */; };
+		A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED6E2966E73600E33356 /* SquidEmojis.swift */; };
+		A074ED732966E95100E33356 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED722966E95100E33356 /* DateFormatter.swift */; };
+		A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED762966EB3A00E33356 /* DailyGoalsGenerator.swift */; };
+		A074ED792966EEC800E33356 /* ViewFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED782966EEC800E33356 /* ViewFormatter.swift */; };
+		A074ED7C2966FFC500E33356 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED7B2966FFC500E33356 /* Goal.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A02A278D2947379B00288C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A02A27732947379A00288C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A277A2947379A00288C4B;
+			remoteInfo = DailyGoals;
+		};
+		A02A27972947379B00288C4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A02A27732947379A00288C4B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A02A277A2947379A00288C4B;
+			remoteInfo = DailyGoals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A02A277B2947379A00288C4B /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A277E2947379A00288C4B /* DailyGoalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsApp.swift; sourceTree = "<group>"; };
+		A02A27802947379A00288C4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A02A27822947379B00288C4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A02A27852947379B00288C4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A02A27872947379B00288C4B /* DailyGoals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyGoals.entitlements; sourceTree = "<group>"; };
+		A02A278C2947379B00288C4B /* DailyGoalsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGoalsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A27902947379B00288C4B /* DailyGoalsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsTests.swift; sourceTree = "<group>"; };
+		A02A27962947379B00288C4B /* DailyGoalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGoalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITests.swift; sourceTree = "<group>"; };
+		A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A02A27AA2947A5D100288C4B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		A02A27AC2947C13700288C4B /* GoalActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalActions.swift; sourceTree = "<group>"; };
+		A074ED6E2966E73600E33356 /* SquidEmojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidEmojis.swift; sourceTree = "<group>"; };
+		A074ED722966E95100E33356 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		A074ED762966EB3A00E33356 /* DailyGoalsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsGenerator.swift; sourceTree = "<group>"; };
+		A074ED782966EEC800E33356 /* ViewFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFormatter.swift; sourceTree = "<group>"; };
+		A074ED7B2966FFC500E33356 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A02A27782947379A00288C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A27892947379B00288C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A27932947379B00288C4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A02A27722947379A00288C4B = {
+			isa = PBXGroup;
+			children = (
+				A02A277D2947379A00288C4B /* DailyGoals */,
+				A02A278F2947379B00288C4B /* DailyGoalsTests */,
+				A02A27992947379B00288C4B /* DailyGoalsUITests */,
+				A02A277C2947379A00288C4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A02A277C2947379A00288C4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A02A277B2947379A00288C4B /* DailyGoals.app */,
+				A02A278C2947379B00288C4B /* DailyGoalsTests.xctest */,
+				A02A27962947379B00288C4B /* DailyGoalsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A02A277D2947379A00288C4B /* DailyGoals */ = {
+			isa = PBXGroup;
+			children = (
+				A074ED7A2966FFBB00E33356 /* Entities */,
+				A074ED712966E94100E33356 /* Utilities */,
+				A074ED6D2966E71700E33356 /* Constants */,
+				A02A277E2947379A00288C4B /* DailyGoalsApp.swift */,
+				A02A27802947379A00288C4B /* ContentView.swift */,
+				A02A27822947379B00288C4B /* Assets.xcassets */,
+				A02A27872947379B00288C4B /* DailyGoals.entitlements */,
+				A02A27842947379B00288C4B /* Preview Content */,
+			);
+			path = DailyGoals;
+			sourceTree = "<group>";
+		};
+		A02A27842947379B00288C4B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A02A27852947379B00288C4B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A02A278F2947379B00288C4B /* DailyGoalsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A02A27902947379B00288C4B /* DailyGoalsTests.swift */,
+			);
+			path = DailyGoalsTests;
+			sourceTree = "<group>";
+		};
+		A02A27992947379B00288C4B /* DailyGoalsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */,
+				A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */,
+			);
+			path = DailyGoalsUITests;
+			sourceTree = "<group>";
+		};
+		A074ED6D2966E71700E33356 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A02A27AC2947C13700288C4B /* GoalActions.swift */,
+				A074ED6E2966E73600E33356 /* SquidEmojis.swift */,
+				A02A27AA2947A5D100288C4B /* Team.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A074ED712966E94100E33356 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A074ED722966E95100E33356 /* DateFormatter.swift */,
+				A074ED762966EB3A00E33356 /* DailyGoalsGenerator.swift */,
+				A074ED782966EEC800E33356 /* ViewFormatter.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		A074ED7A2966FFBB00E33356 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A074ED7B2966FFC500E33356 /* Goal.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A02A277A2947379A00288C4B /* DailyGoals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A27A02947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoals" */;
+			buildPhases = (
+				A02A27772947379A00288C4B /* Sources */,
+				A02A27782947379A00288C4B /* Frameworks */,
+				A02A27792947379A00288C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyGoals;
+			productName = DailyGoals;
+			productReference = A02A277B2947379A00288C4B /* DailyGoals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A02A278B2947379B00288C4B /* DailyGoalsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A27A32947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoalsTests" */;
+			buildPhases = (
+				A02A27882947379B00288C4B /* Sources */,
+				A02A27892947379B00288C4B /* Frameworks */,
+				A02A278A2947379B00288C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02A278E2947379B00288C4B /* PBXTargetDependency */,
+			);
+			name = DailyGoalsTests;
+			productName = DailyGoalsTests;
+			productReference = A02A278C2947379B00288C4B /* DailyGoalsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A02A27952947379B00288C4B /* DailyGoalsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A02A27A62947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoalsUITests" */;
+			buildPhases = (
+				A02A27922947379B00288C4B /* Sources */,
+				A02A27932947379B00288C4B /* Frameworks */,
+				A02A27942947379B00288C4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A02A27982947379B00288C4B /* PBXTargetDependency */,
+			);
+			name = DailyGoalsUITests;
+			productName = DailyGoalsUITests;
+			productReference = A02A27962947379B00288C4B /* DailyGoalsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A02A27732947379A00288C4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					A02A277A2947379A00288C4B = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					A02A278B2947379B00288C4B = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = A02A277A2947379A00288C4B;
+					};
+					A02A27952947379B00288C4B = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = A02A277A2947379A00288C4B;
+					};
+				};
+			};
+			buildConfigurationList = A02A27762947379A00288C4B /* Build configuration list for PBXProject "DailyGoals" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A02A27722947379A00288C4B;
+			productRefGroup = A02A277C2947379A00288C4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A02A277A2947379A00288C4B /* DailyGoals */,
+				A02A278B2947379B00288C4B /* DailyGoalsTests */,
+				A02A27952947379B00288C4B /* DailyGoalsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A02A27792947379A00288C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A27862947379B00288C4B /* Preview Assets.xcassets in Resources */,
+				A02A27832947379B00288C4B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A278A2947379B00288C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A27942947379B00288C4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A02A27772947379A00288C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A074ED732966E95100E33356 /* DateFormatter.swift in Sources */,
+				A02A27AB2947A5D100288C4B /* Team.swift in Sources */,
+				A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */,
+				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,
+				A02A27812947379A00288C4B /* ContentView.swift in Sources */,
+				A074ED792966EEC800E33356 /* ViewFormatter.swift in Sources */,
+				A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */,
+				A074ED7C2966FFC500E33356 /* Goal.swift in Sources */,
+				A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A27882947379B00288C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A27912947379B00288C4B /* DailyGoalsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A02A27922947379B00288C4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A02A279B2947379B00288C4B /* DailyGoalsUITests.swift in Sources */,
+				A02A279D2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A02A278E2947379B00288C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A277A2947379A00288C4B /* DailyGoals */;
+			targetProxy = A02A278D2947379B00288C4B /* PBXContainerItemProxy */;
+		};
+		A02A27982947379B00288C4B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A02A277A2947379A00288C4B /* DailyGoals */;
+			targetProxy = A02A27972947379B00288C4B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A02A279E2947379B00288C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A02A279F2947379B00288C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A02A27A12947379B00288C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyGoals/DailyGoals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A02A27A22947379B00288C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyGoals/DailyGoals.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoals;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A02A27A42947379B00288C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGoals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGoals";
+			};
+			name = Debug;
+		};
+		A02A27A52947379B00288C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyGoals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DailyGoals";
+			};
+			name = Release;
+		};
+		A02A27A72947379B00288C4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DailyGoals;
+			};
+			name = Debug;
+		};
+		A02A27A82947379B00288C4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DailyGoals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A02A27762947379A00288C4B /* Build configuration list for PBXProject "DailyGoals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A279E2947379B00288C4B /* Debug */,
+				A02A279F2947379B00288C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02A27A02947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A27A12947379B00288C4B /* Debug */,
+				A02A27A22947379B00288C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02A27A32947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoalsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A27A42947379B00288C4B /* Debug */,
+				A02A27A52947379B00288C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A02A27A62947379B00288C4B /* Build configuration list for PBXNativeTarget "DailyGoalsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A02A27A72947379B00288C4B /* Debug */,
+				A02A27A82947379B00288C4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A02A27732947379A00288C4B /* Project object */;
+}
