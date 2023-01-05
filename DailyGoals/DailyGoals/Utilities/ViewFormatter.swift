@@ -16,7 +16,7 @@ public struct ViewFormatter {
             .padding(.vertical, 15)
     }
     
-    public static func textInput(itemLabel: String, item : Binding<String>) -> some View {
+    public static func textInput(itemLabel: String, item: Binding<String>) -> some View {
         
         TextField(
             itemLabel,
@@ -26,11 +26,11 @@ public struct ViewFormatter {
         .frame(width: 250)
     }
     
-    public static func picker(label: String, item: Binding<String>, group: [String]) -> some View {
+    public static func picker(label: String, selectedItem: Binding<String>, group: [String]) -> some View {
         
         Picker(
             label,
-            selection: item) {
+            selection: selectedItem) {
                 ForEach(
                     group,
                     id: \.self) {
@@ -46,7 +46,7 @@ public struct ViewFormatter {
         
         Button(action: action, label: { Image(systemName: "plus")
                 .padding(.all, 3)
-                .background(Color.gray)
+                .background(.gray)
             .clipShape(Circle()) }
         ).clipShape(Circle())
     }
