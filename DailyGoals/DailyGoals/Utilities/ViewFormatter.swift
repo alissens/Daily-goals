@@ -16,37 +16,31 @@ struct ViewFormatter {
             .padding(.vertical, 15)
     }
     
-    static func textInput(itemLabel: String, item: Binding<String>) -> some View {
-        
-		TextField(itemLabel, text: item)
-			.padding(.horizontal, 15)
-			.padding(.vertical, 10)
-			.frame(minWidth: 250)
+    static func textInput(item: Binding<String>) -> some View {
+
+		TextField("", text: item)
+			.textFieldStyle(.squareBorder)
+			.labelsHidden()
     }
     
-    static func picker(label: String, selectedItem: Binding<String>, group: [String]) -> some View {
+	static func picker<Item>(selectedItem: Binding<Item?>, items: [Item]) -> some View where Item: Hashable, Item: CustomStringConvertible {
 
-		Picker(label, selection: selectedItem) {
-			Text("-").tag("")
-			ForEach(group, id: \.self) {
-				Text($0)
+		Picker("", selection: selectedItem) {
+			Text("-").tag(Optional<Item>(nil))
+			ForEach(items, id: \.self) {
+				Text($0.description).tag(Optional<Item>($0))
 			}
 		}
-		.padding(.horizontal, 15)
-		.frame(minWidth: 250)
+		.labelsHidden()
 	}
     
     static func plus(action: @escaping () -> Void) -> some View {
 
-		Button(
-			action: action,
-			label: {
-				Image(systemName: "plus")
-					.padding(5)
-					.background(.gray)
-					.clipShape(Circle())
-			}
-		)
-		.buttonStyle(.plain)
+		Button {
+			action()
+		} label: {
+			Label("Add new row", systemImage: "plus.circle.fill")
+		}
+		.help("Add new row")
     }
 }

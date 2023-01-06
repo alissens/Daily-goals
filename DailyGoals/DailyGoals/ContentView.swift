@@ -11,94 +11,82 @@ struct ContentView: View {
     
     @State private var goals = [Goal()]
     @State private var showCopySuccess = false
+
+	private let columns: [GridItem] = [
+		GridItem(.fixed(90)),
+		GridItem(.flexible(minimum: 100)),
+		GridItem(.flexible(minimum: 100)),
+		GridItem(.flexible(minimum: 100))
+	]
     
     var body: some View {
-        VStack {
+		VStack(spacing: 0) {
 			List {
-				Section(header: header, footer: footer) {
-					ForEach($goals) { goal in
-						row2(goal)
-//						row(
-//							ticketNumber: goal.ticketNumber,
-//							description: goal.description,
-//							goalAction: goal.goalAction,
-//							assignedPerson: goal.assignedPerson
-//						)
+				Section(header: sectionHeader) {
+					ForEach($goals) {
+						row(for: $0)
 					}
 				}
 			}
+			.animation(.default, value: goals.count)
 
-			Spacer()
-
-			HStack {
-				Spacer()
-				Button("Submit") {
-					DailyGoalsGenerator.text(goals: goals)
-					showCopySuccess = true
-				}
-				.padding()
-				.alert("Text copied to clipboard", isPresented: $showCopySuccess, actions: {
-					Button("OK") {}
-				})
-			}
+			footer
         }
+		.navigationTitle("Daily Goals")
+		.navigationSubtitle(DateFormatter.formattedDate())
+		.toolbar {
+			ToolbarItem {
+				ViewFormatter.plus {
+					goals.append(Goal())
+				}
+			}
+		}
     }
 
-	private var header: some View {
-		ViewFormatter.date()
+	@ViewBuilder
+	private var sectionHeader: some View {
+		LazyVGrid(columns: columns, alignment: .leading) {
+			Text("Ticket #")
+			Text("Description")
+			Text("Goal action")
+			Text("Assignee")
+		}
 	}
 
 	private var footer: some View {
 		HStack {
 			Spacer()
-			ViewFormatter.plus {
-				goals.append(Goal())
+
+			Button {
+				DailyGoalsGenerator.text(goals: goals)
+				showCopySuccess = true
+			} label: {
+				Label("Copy to clipboard", systemImage: "doc.on.clipboard")
+			}
+			.padding()
+			.alert("Text copied to clipboard", isPresented: $showCopySuccess) {
+				Button("OK") {}
 			}
 		}
 	}
 
-	private func row2(_ goal: Binding<Goal>) -> some View {
+	private func row(for goal: Binding<Goal>) -> some View {
 
-		HStack {
-			TextField("HSC", text: goal.ticketNumber)
-			TextField("Description", text: goal.description)
-			Picker("Action", selection: goal.goalAction) {
-				Text("-").tag("")
-				ForEach(GoalActions.actions, id: \.self) {
-					Text($0)
-				}
-			}
-			Picker("Assignee", selection: goal.assignedPerson) {
-				Text("-").tag("")
-				ForEach(Team.teamMembers) {
-					Text($0.name)
-				}
+		LazyVGrid(columns: columns, alignment: .leading) {
+			ViewFormatter.textInput(item: goal.ticketNumber)
+			ViewFormatter.textInput(item: goal.description)
+			ViewFormatter.picker(selectedItem: goal.goalAction, items: GoalActions.actions)
+			ViewFormatter.picker(selectedItem: goal.assignedPerson, items: Team.members)
+		}
+		.padding(.vertical, 5)
+		.swipeActions {
+			Button(role: .destructive) {
+				goals.removeAll(where: { $0.id == goal.id })
+			} label: {
+				Label("Delete", systemImage: "trash")
 			}
 		}
 	}
-    
-    private func row(
-        ticketNumber: Binding<String>,
-        description: Binding<String>,
-		goalAction: Binding<String>,
-		assignedPerson: Binding<String>
-	) -> some View {
-
-			HStack {
-				ViewFormatter.textInput(itemLabel: "HSC-", item: ticketNumber)
-				ViewFormatter.textInput(itemLabel: "Description", item: description)
-
-				ViewFormatter.picker(
-					label: "Action",
-					selectedItem: goalAction,
-					group: GoalActions.actions)
-
-				ViewFormatter.picker(
-					label: "Assignee",
-					selectedItem: assignedPerson,
-					group: Array(Team.members.keys))
-			}
-		}
 }
 
 struct ContentView_Previews: PreviewProvider {

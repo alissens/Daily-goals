@@ -30,11 +30,19 @@ private extension Goal {
 
 	var text: String {
 		var text = ":circle: [HSC-\(ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(ticketNumber))"
-		text += " - \(description)"
+
+		if description.isEmpty == false {
+			text += " - \(description)"
+		}
+
 		if let assignedPerson {
 			text += " - \(assignedPerson.name)"
 		}
-		text += " - \(goalAction)"
+
+		if let goalAction {
+			text += " - \(goalAction)"
+		}
+
 		text += "\n"
 
 		return text

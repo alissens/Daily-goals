@@ -12,6 +12,6 @@ struct Goal: Identifiable {
 	let id = UUID()
     var ticketNumber: String = ""
     var description: String = ""
-    var goalAction: String = ""
+    var goalAction: String?
     var assignedPerson: TeamMember?
 }

@@ -7,23 +7,14 @@
 
 import Foundation
 
-struct TeamMember: Identifiable, Hashable {
-	let id = UUID()
-	let name: String
-	let handle: String
-}
-
 internal struct Team {
-    
-    static let members = ["Alisa" : "@Alisa Bagrova",
-                          "Bruno" : "@bruno Gondim Bilescky",
-                          "Marcello" : "@marcello",
-                          "Pluddy" : "@pluddy",
-                          "Ian" : "@ianr",
-                          "Sonali" : "@sonalijot"]
 
-	static let teamMembers: [TeamMember] = [
+	static let members: [TeamMember] = [
+		.init(name: "Alisa", handle: "@Alisa Bagrova"),
+		.init(name: "Bruno", handle: "@Bruno Gondim Bilescky"),
 		.init(name: "Marcello", handle: "@marcello"),
-		.init(name: "Alisa", handle: "@Alisa Bagrova")
+		.init(name: "Pluddy", handle: "@pluddy"),
+		.init(name: "Ian", handle: "@ianr"),
+		.init(name: "Sonali", handle: "@sonalijot")
 	]
 }
