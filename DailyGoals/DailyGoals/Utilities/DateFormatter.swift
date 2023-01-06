@@ -9,7 +9,7 @@ import SwiftUI
 
 extension DateFormatter {
     
-    public static func formattedDate() -> String {
+    static func formattedDate() -> String {
         let calendar = Calendar.current
         let dateFormatter = DateFormatter()
         let numberFormatter = NumberFormatter()

@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-public struct DailyGoalsGenerator {
+struct DailyGoalsGenerator {
     
-    public static func text(goals: [Goal]) {
+    static func text(goals: [Goal]) {
         generate(goals)
     }
     
@@ -17,11 +17,26 @@ public struct DailyGoalsGenerator {
         var text = "@squid *\(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
         
         for goal in goals {
-            text += ":circle: [HSC-\(goal.ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(goal.ticketNumber)) - \(goal.description) - \(Team.members[goal.assignedPerson] ?? "") - \(goal.goalAction)\n"
+			text += goal.text
         }
         
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.setString(text, forType: .string)
     }
+}
+
+private extension Goal {
+
+	var text: String {
+		var text = ":circle: [HSC-\(ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(ticketNumber))"
+		text += " - \(description)"
+		if let assignedPerson {
+			text += " - \(assignedPerson.name)"
+		}
+		text += " - \(goalAction)"
+		text += "\n"
+
+		return text
+	}
 }
