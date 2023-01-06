@@ -36,7 +36,7 @@ private extension Goal {
 		}
 
 		if let assignedPerson {
-			text += " - \(assignedPerson.name)"
+			text += " - \(assignedPerson.handle)"
 		}
 
 		if let goalAction {

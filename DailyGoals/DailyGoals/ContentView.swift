@@ -64,7 +64,7 @@ struct ContentView: View {
 				Label("Copy to clipboard", systemImage: "doc.on.clipboard")
 			}
 			.padding()
-			.alert("Text copied to clipboard", isPresented: $showCopySuccess) {
+			.alert("You're good, go away", isPresented: $showCopySuccess) {
 				Button("OK") {}
 			}
 		}
