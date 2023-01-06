@@ -13,7 +13,7 @@ public struct DailyGoalsGenerator {
         generate(goals)
     }
     
-    private static func generate(_ goals: [Goal]){
+    private static func generate(_ goals: [Goal]) {
         var text = "@squid *Daily Goals\(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
         
         for goal in goals {
