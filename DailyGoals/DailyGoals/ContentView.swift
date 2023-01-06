@@ -18,7 +18,7 @@ struct ContentView: View {
 		GridItem(.flexible(minimum: 100)),
 		GridItem(.flexible(minimum: 100))
 	]
-    
+
     var body: some View {
 		VStack(spacing: 0) {
 			List {
@@ -39,6 +39,7 @@ struct ContentView: View {
 				ViewFormatter.plus {
 					goals.append(Goal())
 				}
+				.keyboardShortcut("N", modifiers: [.command])
 			}
 		}
     }
