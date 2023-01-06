@@ -10,7 +10,6 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var goals = [Goal()]
-    @State private var dailyGoalsText = ""
     @State private var showCopySuccess = false
     
     var body: some View {
@@ -20,13 +19,13 @@ struct ContentView: View {
                     ViewFormatter.date()
                     HStack {
                         VStack {
-                            ForEach(0 ..< goals.count, id: \.self) { index in
-
-                                row(
-                                    ticketNumber: $goals[index].ticketNumber,
-                                    description: $goals[index].description,
-                                    goalAction: $goals[index].goalAction,
-                                    assignedPerson: $goals[index].assignedperson)
+                            ForEach($goals) { goal in
+								row(
+									ticketNumber: goal.ticketNumber,
+									description: goal.description,
+									goalAction: goal.goalAction,
+									assignedPerson: goal.assignedPerson
+								)
                             }
                         }
                         
@@ -40,7 +39,7 @@ struct ContentView: View {
                 DailyGoalsGenerator.text(goals: goals)
                 showCopySuccess = true
             }
-            .padding(.all, 10)
+            .padding(10)
             .alert("Text copied to clipboard", isPresented: $showCopySuccess, actions: {
                 Button("OK") {}
             })
@@ -60,14 +59,14 @@ struct ContentView: View {
             Section {
                 ViewFormatter.picker(
                     label: "Action",
-                    item: goalAction,
+                    selectedItem: goalAction,
                     group: GoalActions.actions)
             }
             
             Section {
                 ViewFormatter.picker(
                     label: "Assigned person",
-                    item: assignedPerson,
+                    selectedItem: assignedPerson,
                     group: Array(Team.members.keys))
             }
         }

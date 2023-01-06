@@ -13,11 +13,11 @@ public struct DailyGoalsGenerator {
         generate(goals)
     }
     
-    private static func generate(_ goals: [Goal]){
+    private static func generate(_ goals: [Goal]) {
         var text = "@squid *Daily Goals\(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
         
         for goal in goals {
-            text += ":circle: [HSC-\(goal.ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(goal.ticketNumber)) - \(goal.description) - \(Team.members[goal.assignedperson] ?? "") - \(goal.goalAction)\n"
+            text += ":circle: [HSC-\(goal.ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(goal.ticketNumber)) - \(goal.description) - \(Team.members[goal.assignedPerson] ?? "") - \(goal.goalAction)\n"
         }
         
         let pasteboard = NSPasteboard.general

@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct Goal {
-    
+public struct Goal: Identifiable {
+
+	public let id = UUID()
     public var ticketNumber: String = ""
     public var description: String = ""
     public var goalAction: String = ""
-    public var assignedperson: String = ""
+    public var assignedPerson: String = ""
 }
-
