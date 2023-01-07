@@ -77,7 +77,7 @@ struct ContentView: View {
 			ViewFormatter.textInput(item: goal.ticketNumber)
 			ViewFormatter.textInput(item: goal.description)
 			ViewFormatter.picker(selectedItem: goal.goalAction, items: GoalActions.actions)
-			ViewFormatter.picker(selectedItem: goal.assignedPerson, items: Team.members)
+			MembersSelectorView(goal: goal)
 		}
 		.padding(.vertical, 5)
 		.swipeActions {

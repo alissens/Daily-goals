@@ -13,5 +13,5 @@ struct Goal: Identifiable {
     var ticketNumber: String = ""
     var description: String = ""
     var goalAction: String?
-    var assignedPerson: TeamMember?
+    var members: Set<TeamMember> = []
 }

@@ -35,8 +35,8 @@ private extension Goal {
 			text += " - \(description)"
 		}
 
-		if let assignedPerson {
-			text += " - \(assignedPerson.handle)"
+		if members.isEmpty == false {
+			text += " - \(members.map{ $0.handle }.joined(separator: " "))"
 		}
 
 		if let goalAction {

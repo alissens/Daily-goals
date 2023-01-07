@@ -7,9 +7,9 @@
 
 import Foundation
 
-internal struct Team {
+extension TeamMember {
 
-	static let members: [TeamMember] = [
+	static let all: [TeamMember] = [
 		.init(name: "Alisa", handle: "@Alisa Bagrova"),
 		.init(name: "Bruno", handle: "@Bruno Gondim Bilescky"),
 		.init(name: "Marcello", handle: "@marcello"),
