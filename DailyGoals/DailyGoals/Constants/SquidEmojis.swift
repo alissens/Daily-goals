@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct SquidEmojis {
+struct SquidEmojis {
     
-    public static let squids = [
+    static let squids = [
         ":squidward-dab-party:",
         ":squid_dance:",
         ":squidward-dance:",

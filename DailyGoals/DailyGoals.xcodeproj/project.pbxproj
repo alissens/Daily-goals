@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B3FFD2969E65100597D19 /* MembersSelectorView.swift */; };
+		684D8D6C2968448000414D87 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D8D6B2968448000414D87 /* TeamMember.swift */; };
 		A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A277E2947379A00288C4B /* DailyGoalsApp.swift */; };
 		A02A27812947379A00288C4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27802947379A00288C4B /* ContentView.swift */; };
 		A02A27832947379B00288C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02A27822947379B00288C4B /* Assets.xcassets */; };
@@ -14,7 +16,7 @@
 		A02A27912947379B00288C4B /* DailyGoalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27902947379B00288C4B /* DailyGoalsTests.swift */; };
 		A02A279B2947379B00288C4B /* DailyGoalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */; };
 		A02A279D2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */; };
-		A02A27AB2947A5D100288C4B /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AA2947A5D100288C4B /* Team.swift */; };
+		A02A27AB2947A5D100288C4B /* TeamMember+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AA2947A5D100288C4B /* TeamMember+Extensions.swift */; };
 		A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AC2947C13700288C4B /* GoalActions.swift */; };
 		A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED6E2966E73600E33356 /* SquidEmojis.swift */; };
 		A074ED732966E95100E33356 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED722966E95100E33356 /* DateFormatter.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		683B3FFD2969E65100597D19 /* MembersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersSelectorView.swift; sourceTree = "<group>"; };
+		684D8D6B2968448000414D87 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		A02A277B2947379A00288C4B /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02A277E2947379A00288C4B /* DailyGoalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsApp.swift; sourceTree = "<group>"; };
 		A02A27802947379A00288C4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,7 +56,7 @@
 		A02A27962947379B00288C4B /* DailyGoalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGoalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITests.swift; sourceTree = "<group>"; };
 		A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A02A27AA2947A5D100288C4B /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		A02A27AA2947A5D100288C4B /* TeamMember+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamMember+Extensions.swift"; sourceTree = "<group>"; };
 		A02A27AC2947C13700288C4B /* GoalActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalActions.swift; sourceTree = "<group>"; };
 		A074ED6E2966E73600E33356 /* SquidEmojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidEmojis.swift; sourceTree = "<group>"; };
 		A074ED722966E95100E33356 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 				A074ED6D2966E71700E33356 /* Constants */,
 				A02A277E2947379A00288C4B /* DailyGoalsApp.swift */,
 				A02A27802947379A00288C4B /* ContentView.swift */,
+				683B3FFD2969E65100597D19 /* MembersSelectorView.swift */,
 				A02A27822947379B00288C4B /* Assets.xcassets */,
 				A02A27872947379B00288C4B /* DailyGoals.entitlements */,
 				A02A27842947379B00288C4B /* Preview Content */,
@@ -151,7 +156,6 @@
 			children = (
 				A02A27AC2947C13700288C4B /* GoalActions.swift */,
 				A074ED6E2966E73600E33356 /* SquidEmojis.swift */,
-				A02A27AA2947A5D100288C4B /* Team.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -170,6 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				A074ED7B2966FFC500E33356 /* Goal.swift */,
+				684D8D6B2968448000414D87 /* TeamMember.swift */,
+				A02A27AA2947A5D100288C4B /* TeamMember+Extensions.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -238,7 +244,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					A02A277A2947379A00288C4B = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -305,14 +311,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A074ED732966E95100E33356 /* DateFormatter.swift in Sources */,
-				A02A27AB2947A5D100288C4B /* Team.swift in Sources */,
+				A02A27AB2947A5D100288C4B /* TeamMember+Extensions.swift in Sources */,
 				A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */,
 				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,
 				A02A27812947379A00288C4B /* ContentView.swift in Sources */,
 				A074ED792966EEC800E33356 /* ViewFormatter.swift in Sources */,
 				A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */,
 				A074ED7C2966FFC500E33356 /* Goal.swift in Sources */,
+				684D8D6C2968448000414D87 /* TeamMember.swift in Sources */,
 				A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */,
+				683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +390,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -443,6 +452,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -470,9 +480,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyGoals/DailyGoals.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -495,9 +507,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DailyGoals/DailyGoals.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -521,6 +535,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
@@ -539,6 +554,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
 				MARKETING_VERSION = 1.0;
@@ -556,6 +572,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsUITests;
@@ -572,6 +589,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hudl.DailyGoals.DailyGoalsUITests;

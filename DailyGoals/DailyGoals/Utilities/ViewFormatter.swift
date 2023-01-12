@@ -7,47 +7,40 @@
 
 import SwiftUI
 
-public struct ViewFormatter {
+struct ViewFormatter {
     
-    public static func date() -> some View {
+    static func date() -> some View {
         
         Text("Date: \(DateFormatter.formattedDate())")
             .frame(alignment: .center)
             .padding(.vertical, 15)
     }
     
-    public static func textInput(itemLabel: String, item: Binding<String>) -> some View {
-        
-        TextField(
-            itemLabel,
-            text: item)
-        .padding(.horizontal, 15)
-        .padding(.vertical, 10)
-        .frame(width: 250)
+    static func textInput(item: Binding<String>) -> some View {
+
+		TextField("", text: item)
+			.textFieldStyle(.squareBorder)
+			.labelsHidden()
     }
     
-    public static func picker(label: String, selectedItem: Binding<String>, group: [String]) -> some View {
-        
-        Picker(
-            label,
-            selection: selectedItem) {
-                ForEach(
-                    group,
-                    id: \.self) {
-                        Text($0)
-                        Divider()
-                    }
-            }
-            .padding(.horizontal, 15)
-            .frame(width: 250)
-    }
+	static func picker<Item>(selectedItem: Binding<Item?>, items: [Item]) -> some View where Item: Hashable, Item: CustomStringConvertible {
+
+		Picker("", selection: selectedItem) {
+			Text("-").tag(Optional<Item>(nil))
+			ForEach(items, id: \.self) {
+				Text($0.description).tag(Optional<Item>($0))
+			}
+		}
+		.labelsHidden()
+	}
     
-    public static func plus(action: @escaping () -> Void) -> some View {
-        
-        Button(action: action, label: { Image(systemName: "plus")
-                .padding(.all, 3)
-                .background(.gray)
-            .clipShape(Circle()) }
-        ).clipShape(Circle())
+    static func plus(action: @escaping () -> Void) -> some View {
+
+		Button {
+			action()
+		} label: {
+			Label("Add new row", systemImage: "plus.circle.fill")
+		}
+		.help("Add new row")
     }
 }
