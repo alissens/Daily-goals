@@ -14,55 +14,39 @@ struct MembersSelectorView: View {
 
 	var title: String {
 		if goal.members.isEmpty {
-			return "Assignee"
+			return "🫥"
 		} else {
 			return goal.members.map { $0.name }.joined(separator: ", ")
 		}
 	}
 
     var body: some View {
-		Button(title) {
-			shouldShowPopover.toggle()
-		}
-		.popover(isPresented: $shouldShowPopover, arrowEdge: .trailing) {
-			MembersPopover(goal: $goal)
-		}
+        HStack {
+            Button {
+                shouldShowPopover.toggle()
+            } label: {
+                Image(systemName: "plus.circle.fill")
+            }
+            .buttonStyle(.borderless)
+            .popover(isPresented: $shouldShowPopover) {
+                MembersPopover(goal: $goal)
+            }
+            Text(title)
+                .onTapGesture {
+                    shouldShowPopover.toggle()
+                }
+        }
     }
-}
-
-struct MembersPopover: View {
-
-	@Binding var goal: Goal
-
-	var body: some View {
-		VStack(alignment: .leading, spacing: 5) {
-			ForEach(TeamMember.all) { member in
-				let isSelected = goal.members.contains(member)
-
-				Button {
-					if isSelected {
-						goal.members.remove(member)
-					} else {
-						goal.members.insert(member)
-					}
-				} label: {
-					Label {
-						Text(member.name)
-					} icon: {
-						Image(systemName: isSelected ? "checkmark.square.fill" : "square")
-							.foregroundColor(isSelected ? .green : nil)
-					}
-				}
-				.buttonStyle(.plain)
-			}
-		}
-		.padding()
-	}
 }
 
 struct MembersSelectorView_Previews: PreviewProvider {
     static var previews: some View {
-		MembersSelectorView(goal: .constant(.init()))
-		MembersPopover(goal: .constant(.init(members: [TeamMember.all.first!])))
+        VStack(alignment: .leading) {
+            MembersSelectorView(goal: .constant(.init(members: [.init(name: "Pippo", handle: "@pippo")])))
+            Divider()
+            MembersPopover(goal: .constant(.init(members: [TeamMember.all.first!])))
+        }
+        .padding()
+        .frame(width: 200)
     }
 }

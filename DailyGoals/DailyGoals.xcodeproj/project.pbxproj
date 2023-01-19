@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FAC329794E2700350084 /* MembersPopover.swift */; };
 		683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B3FFD2969E65100597D19 /* MembersSelectorView.swift */; };
 		684D8D6C2968448000414D87 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D8D6B2968448000414D87 /* TeamMember.swift */; };
 		A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A277E2947379A00288C4B /* DailyGoalsApp.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AE0FAC329794E2700350084 /* MembersPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersPopover.swift; sourceTree = "<group>"; };
 		683B3FFD2969E65100597D19 /* MembersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersSelectorView.swift; sourceTree = "<group>"; };
 		684D8D6B2968448000414D87 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
 		A02A277B2947379A00288C4B /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +121,7 @@
 				A02A277E2947379A00288C4B /* DailyGoalsApp.swift */,
 				A02A27802947379A00288C4B /* ContentView.swift */,
 				683B3FFD2969E65100597D19 /* MembersSelectorView.swift */,
+				0AE0FAC329794E2700350084 /* MembersPopover.swift */,
 				A02A27822947379B00288C4B /* Assets.xcassets */,
 				A02A27872947379B00288C4B /* DailyGoals.entitlements */,
 				A02A27842947379B00288C4B /* Preview Content */,
@@ -315,6 +318,7 @@
 				A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */,
 				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,
 				A02A27812947379A00288C4B /* ContentView.swift in Sources */,
+				0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */,
 				A074ED792966EEC800E33356 /* ViewFormatter.swift in Sources */,
 				A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */,
 				A074ED7C2966FFC500E33356 /* Goal.swift in Sources */,
@@ -488,6 +492,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -515,6 +520,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"DailyGoals/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

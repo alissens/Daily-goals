@@ -49,7 +49,7 @@ struct ContentView: View {
 		LazyVGrid(columns: columns, alignment: .leading) {
 			Text("Ticket #")
 			Text("Description")
-			Text("Goal action")
+			Text("Goal")
 			Text("Assignee")
 		}
 	}
