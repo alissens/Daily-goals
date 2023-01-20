@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A320B2A297A960A000F8466 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A320B29297A960A000F8466 /* InfoPlist.strings */; };
+		0A320B2C297A9C43000F8466 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A320B2B297A9C43000F8466 /* String+Extensions.swift */; };
 		0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FAC329794E2700350084 /* MembersPopover.swift */; };
 		683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B3FFD2969E65100597D19 /* MembersSelectorView.swift */; };
 		684D8D6C2968448000414D87 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D8D6B2968448000414D87 /* TeamMember.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A320B29297A960A000F8466 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
+		0A320B2B297A9C43000F8466 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		0AE0FAC329794E2700350084 /* MembersPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersPopover.swift; sourceTree = "<group>"; };
 		683B3FFD2969E65100597D19 /* MembersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersSelectorView.swift; sourceTree = "<group>"; };
 		684D8D6B2968448000414D87 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 				0AE0FAC329794E2700350084 /* MembersPopover.swift */,
 				A02A27822947379B00288C4B /* Assets.xcassets */,
 				A02A27872947379B00288C4B /* DailyGoals.entitlements */,
+				0A320B29297A960A000F8466 /* InfoPlist.strings */,
 				A02A27842947379B00288C4B /* Preview Content */,
 			);
 			path = DailyGoals;
@@ -177,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				A074ED7B2966FFC500E33356 /* Goal.swift */,
+				0A320B2B297A9C43000F8466 /* String+Extensions.swift */,
 				684D8D6B2968448000414D87 /* TeamMember.swift */,
 				A02A27AA2947A5D100288C4B /* TeamMember+Extensions.swift */,
 			);
@@ -288,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A02A27862947379B00288C4B /* Preview Assets.xcassets in Resources */,
+				0A320B2A297A960A000F8466 /* InfoPlist.strings in Resources */,
 				A02A27832947379B00288C4B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A074ED732966E95100E33356 /* DateFormatter.swift in Sources */,
+				0A320B2C297A9C43000F8466 /* String+Extensions.swift in Sources */,
 				A02A27AB2947A5D100288C4B /* TeamMember+Extensions.swift in Sources */,
 				A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */,
 				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,

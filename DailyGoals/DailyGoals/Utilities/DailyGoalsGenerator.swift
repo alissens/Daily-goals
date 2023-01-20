@@ -29,7 +29,9 @@ struct DailyGoalsGenerator {
 private extension Goal {
 
 	var text: String {
-		var text = ":circle: [HSC-\(ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(ticketNumber))"
+        let prefix = String.ticketPrefix
+        let ticketNumber = ticketNumber.removingTicketPrefix
+        var text = ":circle: [\(prefix)\(ticketNumber)](https://hudl-jira.atlassian.net/browse/\(prefix)\(ticketNumber))"
 
 		if description.isEmpty == false {
 			text += " - \(description)"
