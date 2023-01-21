@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Goal: Identifiable {
+struct Goal: Identifiable, Hashable {
 
 	let id = UUID()
     var ticketNumber: String = ""

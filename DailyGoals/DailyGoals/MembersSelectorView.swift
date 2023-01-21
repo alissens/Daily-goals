@@ -14,7 +14,7 @@ struct MembersSelectorView: View {
 
 	var title: String {
 		if goal.members.isEmpty {
-			return "🫥"
+			return "👤"
 		} else {
 			return goal.members.map { $0.name }.joined(separator: ", ")
 		}

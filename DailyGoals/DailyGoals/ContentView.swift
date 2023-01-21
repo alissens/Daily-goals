@@ -11,6 +11,7 @@ struct ContentView: View {
     
     @State private var goals = [Goal()]
     @State private var showCopySuccess = false
+	@State private var isTargeted = false
 
 	private let columns: [GridItem] = [
 		GridItem(.fixed(90)),
@@ -42,6 +43,8 @@ struct ContentView: View {
 				.keyboardShortcut("N", modifiers: [.command])
 			}
 		}
+		.border(.tint, width: isTargeted ? 3 : 0)
+		.onDrop(of: [.url, .internetLocation], isTargeted: $isTargeted, perform: handleDrop)
     }
 
 	@ViewBuilder
@@ -50,7 +53,7 @@ struct ContentView: View {
 			Text("Ticket #")
 			Text("Description")
 			Text("Goal")
-			Text("Assignee")
+			Text("Assignee(s)")
 		}
 	}
 
@@ -80,11 +83,36 @@ struct ContentView: View {
 		.padding(.vertical, 5)
 		.swipeActions {
 			Button(role: .destructive) {
-				goals.removeAll(where: { $0.id == goal.id })
+				if let index = goals.firstIndex(of: goal.wrappedValue) {
+					goals.remove(at: index)
+				}
 			} label: {
 				Label("Delete", systemImage: "trash")
 			}
 		}
+	}
+
+	private func handleDrop(with providers: [NSItemProvider]) -> Bool {
+
+		providers.loadObjects { result in
+
+			Task {
+				do {
+					let url = try result.get()
+					goals.append(.init(ticketNumber: url.ticketNumber))
+				} catch {
+					print(error)
+				}
+			}
+		}
+	}
+
+	private func fetchTicketTitle(from url: URL) async throws -> String? {
+
+		let (data, _) = try await URLSession.shared.data(from: url)
+		let html = String(data: data, encoding: .utf8)
+		guard let matches = html?.matchingStrings(regex: "<title>(.*)</title>") else { return nil }
+		return matches[0][1]
 	}
 }
 

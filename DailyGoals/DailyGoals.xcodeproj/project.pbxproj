@@ -12,6 +12,8 @@
 		0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FAC329794E2700350084 /* MembersPopover.swift */; };
 		683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683B3FFD2969E65100597D19 /* MembersSelectorView.swift */; };
 		684D8D6C2968448000414D87 /* TeamMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684D8D6B2968448000414D87 /* TeamMember.swift */; };
+		68717EBD297C2D3900300049 /* Array+NSItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68717EBC297C2D3900300049 /* Array+NSItemProvider.swift */; };
+		68717EC0297C447200300049 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68717EBF297C447200300049 /* URL+Extensions.swift */; };
 		A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A277E2947379A00288C4B /* DailyGoalsApp.swift */; };
 		A02A27812947379A00288C4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27802947379A00288C4B /* ContentView.swift */; };
 		A02A27832947379B00288C4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02A27822947379B00288C4B /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		0AE0FAC329794E2700350084 /* MembersPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersPopover.swift; sourceTree = "<group>"; };
 		683B3FFD2969E65100597D19 /* MembersSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersSelectorView.swift; sourceTree = "<group>"; };
 		684D8D6B2968448000414D87 /* TeamMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMember.swift; sourceTree = "<group>"; };
+		68717EBC297C2D3900300049 /* Array+NSItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+NSItemProvider.swift"; sourceTree = "<group>"; };
+		68717EBF297C447200300049 /* URL+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		A02A277B2947379A00288C4B /* DailyGoals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyGoals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02A277E2947379A00288C4B /* DailyGoalsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsApp.swift; sourceTree = "<group>"; };
 		A02A27802947379A00288C4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68717EBB297C2D2F00300049 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				68717EBC297C2D3900300049 /* Array+NSItemProvider.swift */,
+				0A320B2B297A9C43000F8466 /* String+Extensions.swift */,
+				68717EBF297C447200300049 /* URL+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A02A27722947379A00288C4B = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +133,7 @@
 		A02A277D2947379A00288C4B /* DailyGoals */ = {
 			isa = PBXGroup;
 			children = (
+				68717EBB297C2D2F00300049 /* Extensions */,
 				A074ED7A2966FFBB00E33356 /* Entities */,
 				A074ED712966E94100E33356 /* Utilities */,
 				A074ED6D2966E71700E33356 /* Constants */,
@@ -182,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				A074ED7B2966FFC500E33356 /* Goal.swift */,
-				0A320B2B297A9C43000F8466 /* String+Extensions.swift */,
 				684D8D6B2968448000414D87 /* TeamMember.swift */,
 				A02A27AA2947A5D100288C4B /* TeamMember+Extensions.swift */,
 			);
@@ -327,9 +341,11 @@
 				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,
 				A02A27812947379A00288C4B /* ContentView.swift in Sources */,
 				0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */,
+				68717EC0297C447200300049 /* URL+Extensions.swift in Sources */,
 				A074ED792966EEC800E33356 /* ViewFormatter.swift in Sources */,
 				A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */,
 				A074ED7C2966FFC500E33356 /* Goal.swift in Sources */,
+				68717EBD297C2D3900300049 /* Array+NSItemProvider.swift in Sources */,
 				684D8D6C2968448000414D87 /* TeamMember.swift in Sources */,
 				A02A277F2947379A00288C4B /* DailyGoalsApp.swift in Sources */,
 				683B3FFE2969E65100597D19 /* MembersSelectorView.swift in Sources */,
