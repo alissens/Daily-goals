@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var goals = [Goal()]
+	@State private var goals: [Goal] = []
     @State private var showCopySuccess = false
 	@State private var isTargeted = false
 
 	private let columns: [GridItem] = [
 		GridItem(.fixed(90)),
-		GridItem(.flexible(minimum: 100)),
-		GridItem(.flexible(minimum: 100)),
-		GridItem(.flexible(minimum: 100))
+		GridItem(.flexible(minimum: 250)),
+		GridItem(.flexible(minimum: 80, maximum: 100)),
+		GridItem(.flexible(minimum: 100, maximum: 100))
 	]
 
     var body: some View {
@@ -38,7 +38,7 @@ struct ContentView: View {
 		.toolbar {
 			ToolbarItem {
 				ViewFormatter.plus {
-					goals.append(Goal())
+					goals.append(.init())
 				}
 				.keyboardShortcut("N", modifiers: [.command])
 			}

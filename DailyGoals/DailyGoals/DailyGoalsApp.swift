@@ -25,5 +25,10 @@ struct DailyGoalsApp: App {
         WindowGroup {
             ContentView()
         }
+
+		Settings {
+			SettingsView()
+				.frame(minWidth: 400, minHeight: 400)
+		}
     }
 }

@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct TeamMember: Identifiable, Hashable {
+struct TeamMember: Identifiable, Hashable, Codable {
 
-	let id = UUID()
+	let id: UUID
 	let name: String
 	let handle: String
 }
 
-extension TeamMember: CustomStringConvertible {
+extension TeamMember {
 
-	var description: String { name }
+	init(name: String, handle: String) {
+		self.init(id: .init(), name: name, handle: handle)
+	}
 }

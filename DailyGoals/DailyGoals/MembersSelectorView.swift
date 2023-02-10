@@ -40,11 +40,12 @@ struct MembersSelectorView: View {
 }
 
 struct MembersSelectorView_Previews: PreviewProvider {
-    static var previews: some View {
+
+	static var previews: some View {
         VStack(alignment: .leading) {
             MembersSelectorView(goal: .constant(.init(members: [.init(name: "Pippo", handle: "@pippo")])))
             Divider()
-            MembersPopover(goal: .constant(.init(members: [TeamMember.all.first!])))
+            MembersPopover(goal: .constant(.init()))
         }
         .padding()
         .frame(width: 200)
