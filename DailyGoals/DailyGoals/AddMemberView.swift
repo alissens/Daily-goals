@@ -17,7 +17,7 @@ struct AddMemberView: View {
 
 	var body: some View {
 		Form {
-			Section(header: Text("Add new team member").font(.title3)) {
+			Section(header: Text("Add new team member")) {
 				TextField("Name", text: $name)
 				TextField("Handle", text: $handle)
 

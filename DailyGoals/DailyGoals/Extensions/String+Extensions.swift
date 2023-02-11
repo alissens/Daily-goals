@@ -9,11 +9,24 @@ import Foundation
 
 extension String {
 
-    static let ticketPrefix = "HSC-"
+	static let ticketPrefixKey = "ticketPrefix"
+	static let defaultTicketPrefixValue = "HSC-"
 
-    var removingTicketPrefix: String {
-        if lowercased().hasPrefix(.ticketPrefix.lowercased()) {
-			return String(dropFirst(String.ticketPrefix.count))
+	static let jiraURLKey = "jiraURL"
+	static let defaultJiraURLValue = "https://hudl-jira.atlassian.net"
+
+	static let teamMembersKey = "teamMembers"
+
+	static let squadHandleKey = "squadHandle"
+	static let defaultSquadHandleValue = "@squid"
+}
+
+extension String {
+
+	var removingTicketPrefix: String {
+		let prefix = UserDefaults.standard.ticketPrefix
+		if lowercased().hasPrefix(prefix.lowercased()) {
+			return String(dropFirst(prefix.count))
 		}
 		return self
 	}

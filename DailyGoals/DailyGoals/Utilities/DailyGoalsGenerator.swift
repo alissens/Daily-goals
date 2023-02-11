@@ -10,16 +10,19 @@ import SwiftUI
 struct DailyGoalsGenerator {
     
     static func text(goals: [Goal]) {
-        generate(goals)
+
+		generate(goals)
     }
     
     private static func generate(_ goals: [Goal]) {
-        var text = "@squid *Daily Goals \(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
+
+		let handle = UserDefaults.standard.squadHandle
+		var text = "\(handle) *Daily Goals \(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
         
         for goal in goals {
 			text += goal.text
         }
-        
+
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.setString(text, forType: .string)
@@ -29,14 +32,15 @@ struct DailyGoalsGenerator {
 private extension Goal {
 
 	var text: String {
-        let prefix = String.ticketPrefix
+		let prefix = UserDefaults.standard.ticketPrefix
+		let url = UserDefaults.standard.jiraURLString
         let ticketNumber = ticketNumber.removingTicketPrefix
 
 		if ticketNumber.isEmpty {
 			return ""
 		}
 
-		var text = ":circle: [\(prefix)\(ticketNumber)](https://hudl-jira.atlassian.net/browse/\(prefix)\(ticketNumber))"
+		var text = ":circle: [\(prefix)\(ticketNumber)](\(url)/browse/\(prefix)\(ticketNumber))"
 
 		if description.isEmpty == false {
 			text += " - \(description)"
@@ -47,7 +51,7 @@ private extension Goal {
 		}
 
 		if let goalAction {
-			text += " - \(goalAction)"
+			text += " - `\(goalAction)`"
 		}
 
 		text += "\n"

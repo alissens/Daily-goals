@@ -9,8 +9,23 @@ import SwiftUI
 
 struct SettingsView: View {
 
+	@AppStorage(.ticketPrefixKey) private var ticketPrefix = .defaultTicketPrefixValue
+	@AppStorage(.jiraURLKey) private var jiraURL = .defaultJiraURLValue
+	@AppStorage(.squadHandleKey) private var squadHandle = .defaultSquadHandleValue
+
     var body: some View {
-		TeamMembersView()
+		Form {
+			LabeledContent {
+				TeamMembersView()
+					.frame(maxHeight: 200)
+			} label: {
+				Text("Team")
+			}
+			TextField("Ticket prefix", text: $ticketPrefix)
+			TextField("Jira url", text: $jiraURL)
+			TextField("Squad handle", text: $squadHandle)
+		}
+		.padding()
     }
 }
 

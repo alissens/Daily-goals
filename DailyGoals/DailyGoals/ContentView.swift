@@ -16,15 +16,15 @@ struct ContentView: View {
 	private let columns: [GridItem] = [
 		GridItem(.fixed(90)),
 		GridItem(.flexible(minimum: 250)),
-		GridItem(.flexible(minimum: 80, maximum: 100)),
-		GridItem(.flexible(minimum: 100, maximum: 100))
+		GridItem(.fixed(150)),
+		GridItem(.flexible(minimum: 100))
 	]
 
     var body: some View {
 		VStack(spacing: 0) {
 			List {
 				Section(header: sectionHeader) {
-					ForEach($goals) {
+					ForEach($goals, editActions: .all) {
 						row(for: $0)
 					}
 				}
@@ -81,15 +81,6 @@ struct ContentView: View {
 			MembersSelectorView(goal: goal)
 		}
 		.padding(.vertical, 5)
-		.swipeActions {
-			Button(role: .destructive) {
-				if let index = goals.firstIndex(of: goal.wrappedValue) {
-					goals.remove(at: index)
-				}
-			} label: {
-				Label("Delete", systemImage: "trash")
-			}
-		}
 	}
 
 	private func handleDrop(with providers: [NSItemProvider]) -> Bool {

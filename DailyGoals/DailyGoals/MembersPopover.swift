@@ -10,7 +10,7 @@ import SwiftUI
 struct MembersPopover: View {
 
     @Binding var goal: Goal
-	@AppStorage("teamMembers") private var teamMembers: [TeamMember] = []
+	@AppStorage(.teamMembersKey) private var teamMembers: [TeamMember] = []
 
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {

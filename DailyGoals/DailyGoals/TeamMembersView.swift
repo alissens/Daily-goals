@@ -21,29 +21,15 @@ private extension TeamMember {
 
 struct TeamMembersView: View {
 
-	@AppStorage("teamMembers") private var teamMembers: [TeamMember] = []
+	@AppStorage(.teamMembersKey) private var teamMembers: [TeamMember] = []
 	@State private var shouldShowNewMemberDialog = false
 
 	var body: some View {
-		List {
-			Section {
-				ForEach(teamMembers) { member in
-					VStack(alignment: .leading) {
-						Text(member.name)
-						Text(member.handle)
-							.font(.footnote)
-							.foregroundColor(.secondary)
-					}
-					.swipeActions {
-						Button(role: .destructive) {
-							if let index = teamMembers.firstIndex(of: member) {
-								teamMembers.remove(at: index)
-							}
-						} label: {
-							Label("Delete", systemImage: "trash")
-						}
-					}
-				}
+		List($teamMembers, editActions: .all) { $member in
+			HStack {
+				Text(member.name)
+				Text(member.handle)
+					.foregroundColor(.secondary)
 			}
 		}
 		.listStyle(.bordered(alternatesRowBackgrounds: true))
@@ -54,19 +40,24 @@ struct TeamMembersView: View {
 			}
 			.frame(minWidth: 300)
 		}
-		.toolbar {
-			Button("New") {
-				shouldShowNewMemberDialog = true
-			}
-			.keyboardShortcut("N", modifiers: [.command])
+		.overlay(alignment: .topTrailing) {
+			VStack(alignment: .trailing) {
+				Button {
+					shouldShowNewMemberDialog = true
+				} label: {
+					Image(systemName: "plus")
+				}
+				.keyboardShortcut("N", modifiers: [.command])
 
-			if teamMembers.isEmpty {
-				Button("Squid") {
-					TeamMember.squid.forEach { member in
-						teamMembers.append(member)
+				if teamMembers.isEmpty {
+					Button("🦑") {
+						TeamMember.squid.forEach { member in
+							teamMembers.append(member)
+						}
 					}
 				}
 			}
+			.padding()
 		}
     }
 }
