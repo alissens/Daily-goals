@@ -26,7 +26,6 @@
 		A02A27912947379B00288C4B /* DailyGoalsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27902947379B00288C4B /* DailyGoalsTests.swift */; };
 		A02A279B2947379B00288C4B /* DailyGoalsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */; };
 		A02A279D2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */; };
-		A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02A27AC2947C13700288C4B /* GoalActions.swift */; };
 		A074ED6F2966E73600E33356 /* SquidEmojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED6E2966E73600E33356 /* SquidEmojis.swift */; };
 		A074ED732966E95100E33356 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED722966E95100E33356 /* DateFormatter.swift */; };
 		A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074ED762966EB3A00E33356 /* DailyGoalsGenerator.swift */; };
@@ -75,7 +74,6 @@
 		A02A27962947379B00288C4B /* DailyGoalsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyGoalsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A02A279A2947379B00288C4B /* DailyGoalsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITests.swift; sourceTree = "<group>"; };
 		A02A279C2947379B00288C4B /* DailyGoalsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A02A27AC2947C13700288C4B /* GoalActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalActions.swift; sourceTree = "<group>"; };
 		A074ED6E2966E73600E33356 /* SquidEmojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquidEmojis.swift; sourceTree = "<group>"; };
 		A074ED722966E95100E33356 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		A074ED762966EB3A00E33356 /* DailyGoalsGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalsGenerator.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		A074ED6D2966E71700E33356 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				A02A27AC2947C13700288C4B /* GoalActions.swift */,
 				A074ED6E2966E73600E33356 /* SquidEmojis.swift */,
 			);
 			path = Constants;
@@ -352,7 +349,6 @@
 				6845D01D29979C69002687CD /* UserDefaults+Extensions.swift in Sources */,
 				0A320B2C297A9C43000F8466 /* String+Extensions.swift in Sources */,
 				A074ED772966EB3A00E33356 /* DailyGoalsGenerator.swift in Sources */,
-				A02A27AD2947C13700288C4B /* GoalActions.swift in Sources */,
 				A02A27812947379A00288C4B /* ContentView.swift in Sources */,
 				0AE0FAC429794E2700350084 /* MembersPopover.swift in Sources */,
 				68717EC0297C447200300049 /* URL+Extensions.swift in Sources */,

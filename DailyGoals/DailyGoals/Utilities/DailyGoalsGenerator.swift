@@ -55,8 +55,13 @@ private extension Goal {
 			text += " - \(members.map{ $0.handle }.joined(separator: " "))"
 		}
 
-		if let goalAction {
-			text += " - `\(goalAction)`"
+		switch action {
+		case .additional:
+			text += ""
+		case .unknown:
+			text += " - `???`"
+		default:
+			text += " - `\(action.description)`"
 		}
 
 		text += "\n"

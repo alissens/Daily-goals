@@ -23,12 +23,11 @@ struct ViewFormatter {
 			.labelsHidden()
     }
     
-	static func picker<Item>(selectedItem: Binding<Item?>, items: [Item]) -> some View where Item: Hashable, Item: CustomStringConvertible {
+	static func picker<Item>(selectedItem: Binding<Item>, items: [Item]) -> some View where Item: Hashable, Item: CustomStringConvertible {
 
 		Picker("", selection: selectedItem) {
-			Text("-").tag(Optional<Item>(nil))
 			ForEach(items, id: \.self) {
-				Text($0.description).tag(Optional<Item>($0))
+				Text($0.description).tag($0)
 			}
 		}
 		.labelsHidden()
