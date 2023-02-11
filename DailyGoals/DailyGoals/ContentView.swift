@@ -97,14 +97,6 @@ struct ContentView: View {
 			}
 		}
 	}
-
-	private func fetchTicketTitle(from url: URL) async throws -> String? {
-
-		let (data, _) = try await URLSession.shared.data(from: url)
-		let html = String(data: data, encoding: .utf8)
-		guard let matches = html?.matchingStrings(regex: "<title>(.*)</title>") else { return nil }
-		return matches[0][1]
-	}
 }
 
 struct ContentView_Previews: PreviewProvider {

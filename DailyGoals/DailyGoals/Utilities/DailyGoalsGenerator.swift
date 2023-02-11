@@ -16,9 +16,14 @@ struct DailyGoalsGenerator {
     
     private static func generate(_ goals: [Goal]) {
 
-		let handle = UserDefaults.standard.squadHandle
-		var text = "\(handle) *Daily Goals \(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
-        
+		var text = "\(UserDefaults.standard.squadHandle) *Daily Goals \(DateFormatter.formattedDate())*"
+
+		if let emoji = SquidEmojis.squids.randomElement() {
+			text += " \(emoji)"
+		}
+
+		text += "\n"
+
         for goal in goals {
 			text += goal.text
         }
