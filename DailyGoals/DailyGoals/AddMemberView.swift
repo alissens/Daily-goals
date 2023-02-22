@@ -29,8 +29,8 @@ struct AddMemberView: View {
 			}
 		}
 		.onSubmit(save)
-		.padding()		
-    }
+		.padding()
+	}
 
 	private func save() {
 
@@ -51,5 +51,5 @@ struct AddMemberView_Previews: PreviewProvider {
 
 	static var previews: some View {
 		AddMemberView(shouldShow: .constant(true), onSave: { _, _ in })
-    }
+	}
 }
