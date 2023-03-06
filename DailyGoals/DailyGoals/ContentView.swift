@@ -77,7 +77,7 @@ struct ContentView: View {
 		LazyVGrid(columns: columns, alignment: .leading) {
 			ViewFormatter.textInput(item: goal.ticketNumber)
 			ViewFormatter.textInput(item: goal.description)
-			ViewFormatter.picker(selectedItem: goal.goalAction, items: GoalActions.actions)
+			ViewFormatter.picker(selectedItem: goal.action, items: Goal.Action.allCases)
 			MembersSelectorView(goal: goal)
 		}
 		.padding(.vertical, 5)

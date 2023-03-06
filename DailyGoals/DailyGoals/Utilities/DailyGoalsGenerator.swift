@@ -24,9 +24,17 @@ struct DailyGoalsGenerator {
 
 		text += "\n"
 
-        for goal in goals {
+        for goal in goals where goal.action != .additional {
 			text += goal.text
         }
+
+        let additionals = goals.filter { $0.action == .additional }
+        if additionals.isEmpty == false {
+                text += "\n*Additional:*\n"
+		for goal in additionals {
+		        text += goal.text
+		}
+	}
 
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
@@ -55,8 +63,13 @@ private extension Goal {
 			text += " - \(members.map{ $0.handle }.joined(separator: " "))"
 		}
 
-		if let goalAction {
-			text += " - `\(goalAction)`"
+		switch action {
+		case .additional:
+			text += ""
+		case .unknown:
+			text += " - `???`"
+		default:
+			text += " - `\(action.description)`"
 		}
 
 		text += "\n"
