@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var goals = [Goal()]
+	@State private var goals: [Goal] = []
     @State private var showCopySuccess = false
+	@State private var isTargeted = false
 
 	private let columns: [GridItem] = [
 		GridItem(.fixed(90)),
-		GridItem(.flexible(minimum: 100)),
-		GridItem(.flexible(minimum: 100)),
+		GridItem(.flexible(minimum: 250)),
+		GridItem(.fixed(150)),
 		GridItem(.flexible(minimum: 100))
 	]
 
@@ -23,7 +24,7 @@ struct ContentView: View {
 		VStack(spacing: 0) {
 			List {
 				Section(header: sectionHeader) {
-					ForEach($goals) {
+					ForEach($goals, editActions: .all) {
 						row(for: $0)
 					}
 				}
@@ -37,11 +38,13 @@ struct ContentView: View {
 		.toolbar {
 			ToolbarItem {
 				ViewFormatter.plus {
-					goals.append(Goal())
+					goals.append(.init())
 				}
 				.keyboardShortcut("N", modifiers: [.command])
 			}
 		}
+		.border(.tint, width: isTargeted ? 3 : 0)
+		.onDrop(of: [.url, .internetLocation], isTargeted: $isTargeted, perform: handleDrop)
     }
 
 	@ViewBuilder
@@ -49,8 +52,8 @@ struct ContentView: View {
 		LazyVGrid(columns: columns, alignment: .leading) {
 			Text("Ticket #")
 			Text("Description")
-			Text("Goal action")
-			Text("Assignee")
+			Text("Goal")
+			Text("Assignee(s)")
 		}
 	}
 
@@ -74,15 +77,23 @@ struct ContentView: View {
 		LazyVGrid(columns: columns, alignment: .leading) {
 			ViewFormatter.textInput(item: goal.ticketNumber)
 			ViewFormatter.textInput(item: goal.description)
-			ViewFormatter.picker(selectedItem: goal.goalAction, items: GoalActions.actions)
+			ViewFormatter.picker(selectedItem: goal.action, items: Goal.Action.allCases)
 			MembersSelectorView(goal: goal)
 		}
 		.padding(.vertical, 5)
-		.swipeActions {
-			Button(role: .destructive) {
-				goals.removeAll(where: { $0.id == goal.id })
-			} label: {
-				Label("Delete", systemImage: "trash")
+	}
+
+	private func handleDrop(with providers: [NSItemProvider]) -> Bool {
+
+		providers.loadObjects { result in
+
+			Task {
+				do {
+					let url = try result.get()
+					goals.append(.init(ticketNumber: url.ticketNumber))
+				} catch {
+					print(error)
+				}
 			}
 		}
 	}

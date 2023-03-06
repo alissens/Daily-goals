@@ -10,16 +10,32 @@ import SwiftUI
 struct DailyGoalsGenerator {
     
     static func text(goals: [Goal]) {
-        generate(goals)
+
+		generate(goals)
     }
     
     private static func generate(_ goals: [Goal]) {
-        var text = "@squid *Daily Goals \(DateFormatter.formattedDate())* \(SquidEmojis.squids.randomElement()!)\n"
-        
-        for goal in goals {
+
+		var text = "\(UserDefaults.standard.squadHandle) *Daily Goals \(DateFormatter.formattedDate())*"
+
+		if let emoji = SquidEmojis.squids.randomElement() {
+			text += " \(emoji)"
+		}
+
+		text += "\n"
+
+        for goal in goals where goal.action != .additional {
 			text += goal.text
         }
-        
+
+        let additionals = goals.filter { $0.action == .additional }
+        if additionals.isEmpty == false {
+                text += "\n*Additional:*\n"
+		for goal in additionals {
+		        text += goal.text
+		}
+	}
+
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
         pasteboard.setString(text, forType: .string)
@@ -29,7 +45,15 @@ struct DailyGoalsGenerator {
 private extension Goal {
 
 	var text: String {
-		var text = ":circle: [HSC-\(ticketNumber)](https://hudl-jira.atlassian.net/browse/HSC-\(ticketNumber))"
+		let prefix = UserDefaults.standard.ticketPrefix
+		let url = UserDefaults.standard.jiraURLString
+        let ticketNumber = ticketNumber.removingTicketPrefix
+
+		if ticketNumber.isEmpty {
+			return ""
+		}
+
+		var text = ":circle: [\(prefix)\(ticketNumber)](\(url)/browse/\(prefix)\(ticketNumber))"
 
 		if description.isEmpty == false {
 			text += " - \(description)"
@@ -39,8 +63,13 @@ private extension Goal {
 			text += " - \(members.map{ $0.handle }.joined(separator: " "))"
 		}
 
-		if let goalAction {
-			text += " - \(goalAction)"
+		switch action {
+		case .additional:
+			text += ""
+		case .unknown:
+			text += " - `???`"
+		default:
+			text += " - `\(action.description)`"
 		}
 
 		text += "\n"
