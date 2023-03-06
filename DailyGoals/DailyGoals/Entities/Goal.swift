@@ -38,6 +38,6 @@ struct Goal: Identifiable, Hashable {
 	let id = UUID()
     var ticketNumber = ""
     var description = ""
-	var action: Action = .unknown
+    var action: Action = .unknown
     var members: Set<TeamMember> = []
 }
