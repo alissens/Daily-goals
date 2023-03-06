@@ -28,13 +28,13 @@ struct DailyGoalsGenerator {
 			text += goal.text
         }
 
-		let additionals = goals.filter { $0.action == .additional }
-		if additionals.isEmpty == false {
-			text += "\n*Additional:*\n"
-			for goal in additionals {
-				text += goal.text
-			}
+        let additionals = goals.filter { $0.action == .additional }
+        if additionals.isEmpty == false {
+                text += "\n*Additional:*\n"
+		for goal in additionals {
+		        text += goal.text
 		}
+	}
 
         let pasteboard = NSPasteboard.general
         pasteboard.clearContents()
