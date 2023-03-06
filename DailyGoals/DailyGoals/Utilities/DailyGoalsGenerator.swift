@@ -24,7 +24,7 @@ struct DailyGoalsGenerator {
 
 		text += "\n"
 
-		for goal in goals where goal.action != .additional {
+        for goal in goals where goal.action != .additional {
 			text += goal.text
         }
 
