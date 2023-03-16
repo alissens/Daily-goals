@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-private extension TeamMember {
+extension TeamMember {
 
 	public static let squid: [TeamMember] = [
 		.init(name: "Alisa", handle: "@Alisa Bagrova"),
