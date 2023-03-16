@@ -16,7 +16,7 @@ extension TeamMember {
 		.init(name: "Pluddy", handle: "@pluddy"),
 		.init(name: "Ian", handle: "@ianr"),
 		.init(name: "Sonali", handle: "@sonalijot"),
-        .init(name: "Stu", handle: "stu")
+        .init(name: "Stu", handle: "@stu")
 	]
 }
 
