@@ -9,13 +9,14 @@ import SwiftUI
 
 private extension TeamMember {
 
-	static let squid: [TeamMember] = [
+	public static let squid: [TeamMember] = [
 		.init(name: "Alisa", handle: "@Alisa Bagrova"),
 		.init(name: "Bruno", handle: "@Bruno Gondim Bilescky"),
 		.init(name: "Marcello", handle: "@marcello"),
 		.init(name: "Pluddy", handle: "@pluddy"),
 		.init(name: "Ian", handle: "@ianr"),
-		.init(name: "Sonali", handle: "@sonalijot")
+		.init(name: "Sonali", handle: "@sonalijot"),
+        .init(name: "Stu", handle: "stu")
 	]
 }
 

@@ -50,10 +50,10 @@ struct ContentView: View {
 	@ViewBuilder
 	private var sectionHeader: some View {
 		LazyVGrid(columns: columns, alignment: .leading) {
-			Text("Ticket #")
+			Text("Ticket number")
 			Text("Description")
 			Text("Goal")
-			Text("Assignee(s)")
+			Text("Assigned person")
 		}
 	}
 
@@ -68,7 +68,7 @@ struct ContentView: View {
 				Label("Copy to clipboard", systemImage: "doc.on.clipboard")
 			}
 			.padding()
-            .alert("You're good", isPresented: $showCopySuccess) {}
+            .alert("Goals copied", isPresented: $showCopySuccess) {}
 		}
 	}
 
